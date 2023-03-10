@@ -16,6 +16,12 @@ class ShoppingList:
     def amount(self, n: int):
         return self.products[n - 1][1]
 
+
 # -------------------------
 # Write your solution here:
 # -------------------------
+def total_units(my_list: ShoppingList) -> int:
+    total = 0
+    for i in range(1, my_list.number_of_items() + 1):
+        total += my_list.amount(i)
+    return total
