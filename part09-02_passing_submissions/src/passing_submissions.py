@@ -6,6 +6,13 @@ class ExamSubmission:
         self.points = points
 
     def __str__(self):
-        return f'ExamSubmission (examinee: {self.examinee}, points: {self.points})'
+        return f"ExamSubmission (examinee: {self.examinee}, points: {self.points})"
+
 
 # # WRITE YOUR SOLUTION HERE:
+
+
+def passed(submissions: list[ExamSubmission], lowest_passing: int) -> list[ExamSubmission]:
+    return list(
+        filter(lambda submission: submission.points >= lowest_passing, submissions)
+    )

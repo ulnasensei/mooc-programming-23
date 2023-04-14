@@ -5,7 +5,10 @@ class Car:
         self.make = make
         self.top_speed = top_speed
 
-   def __str__(self):
+    def __str__(self):
         return f"Car (make: {self.make}, top speed: {self.top_speed})"
 
 # WRITE YOUR SOLUTION HERE:
+
+def fastest_car(cars: list) -> str:
+    return sorted(cars, key=lambda x: x.top_speed, reverse=True)[0].make
